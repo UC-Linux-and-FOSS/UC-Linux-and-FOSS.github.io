@@ -1,0 +1,29 @@
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+TITLE:About | UC Linux and FOSS Club
+#+OPTIONS: num:nil
+#+EXPORT_FILE_NAME: ../index.html
+
+* Objectives
+Make student life easier for students familiar with Linux ecosystem and FOSS, and pass that knowledge to other students that aren't familiar with them.
+
+* Officers
+
+** President
+- Name: Gaurav Atreya
+- Program/Major: MS in Environmental Engineering
+- Socials: [[https://github.com/Atreyagaurav][github]]
+  
+** Vice President
+
+** Treasurer
+
+** Faculty Advisor
+
+* Links
+
+** github
+
+** Campuslink
+
+** Discord
+

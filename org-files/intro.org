@@ -6,6 +6,36 @@
 * Objectives
 Make student life easier for students familiar with Linux ecosystem and FOSS, and pass that knowledge to other students that aren't familiar with them.
 
+* Join us on
+- [[https://campuslink.uc.edu/organization/uc-linux-and-foss][CampusLink]]
+- [[https://discord.gg/wm2qGEnK8y][Discord]]
+- [[https://github.com/UC-Linux-and-FOSS][Github]]
+
+* Introduction
+** What is FOSS
+
+FOSS stands for *Free and Open Source Software*, the 4 main points for FOSS are as follows:
+- The freedom to run the program as you wish, for any purpose (freedom 0).
+- The freedom to study how the program works, and change it so it does your computing as you wish (freedom 1). Access to the source code is a precondition for this.
+- The freedom to redistribute copies so you can help others (freedom 2).
+- The freedom to distribute copies of your modified versions to others (freedom 3). By doing this you can give the whole community a chance to benefit from your changes. Access to the source code is a precondition for this.
+
+You might have heard of Open Source before, if yes it includes that. If not well just remember free as in freedom. This is in contrast to proprietary software, where the software is under restrictive copyright licensing and the source code is usually hidden from the users.
+
+** What is Linux
+Linux is a kernel (Base for Operating System), and it's everywhere, *your phone* (android), to the *smart TV*, your smart home with all those functions, the *websites* you're browsing,  almost everything in this world (and outside this world: satellites, robots in mars, etc.) runs on Linux. And it's everywhere because it's reliable, secure and customizable.
+
+[[./images/linux-mindmap.png]]
+
+So the one we're talking about here are the users of *Linux Based Desktop Operating Systems*.
+
+Even then there are hundreds of OS. Which makes it hard for UC to support all of them, hence we want to gather together to help each other.
+
+* Why use FOSS
+Remember Free in FOSS is for Freedom not Free as in Free Beer. But,
+
+[[./images/why-foss.png]]
+
 * Officers
 
 ** President
@@ -14,16 +44,17 @@ Make student life easier for students familiar with Linux ecosystem and FOSS, an
 - Socials: [[https://github.com/Atreyagaurav][github]]
   
 ** Vice President
+- Name: Guy Cooper
+- Program/Major:
+- Socials: 
 
 ** Treasurer
+- Name: Benjamin McIntyre
+- Program/Major:
+- Socials: 
 
 ** Faculty Advisor
+- Name: Nitin Nitin
+- Position: Associate Professor Educator at University of Cincinnati
 
-* Links
-
-** github
-
-** Campuslink
-
-** Discord
 

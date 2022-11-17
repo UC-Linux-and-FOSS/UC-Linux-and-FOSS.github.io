@@ -6,6 +6,11 @@
 * Objectives
 Make student life easier for students familiar with Linux ecosystem and FOSS, and pass that knowledge to other students that aren't familiar with them.
 
+** We help students with
+- [[./wiki/][Wiki that we Maintain for Students]]
+- Discord group for async/live help on stuffs
+- Github repo for useful tools (coming soon)
+
 * Join us on
 - [[https://campuslink.uc.edu/organization/uc-linux-and-foss][CampusLink]]
 - [[https://discord.gg/wm2qGEnK8y][Discord]]

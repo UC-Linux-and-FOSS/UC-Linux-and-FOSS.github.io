@@ -1,0 +1,23 @@
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+TITLE:Wiki | UC Linux and FOSS Club
+#+OPTIONS: num:nil
+#+EXPORT_FILE_NAME: ../index.html
+
+* Recently Added Pages
+- [[./no-linux.html][What to do if you can't use something in Linux]]
+* Pinned Pages
+
+* Categorized Index
+
+** Coping with no Linux Support
+- [[./no-linux.html][What to do if you can't use something in Linux]]
+
+** UC Related
+
+** Daily Life
+
+** Student Life
+
+** Programming
+
+** FOSS Alternatives

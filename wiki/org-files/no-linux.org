@@ -1,0 +1,22 @@
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+TITLE: No Linux? | UC Linux Wiki
+#+OPTIONS: num:nil
+#+EXPORT_FILE_NAME: ../no-linux.html
+
+* UC Resources
+** Vmware horizon client
+Link: https://mydesk.uc.edu/
+
+UC provides support for virtual desktops with Windows and preinstalled programs.
+
+You can install the client program and log in with your 6+2.
+
+Note that you cannot install programs and be sure to save anything important in the cloud so that you won't lose your files.
+
+I haven't used the web version so can't tell you about that but the vmware-horizon-client works well in my Arch Linux.
+
+* Do it yourself
+** Virtual Box
+Link: https://www.virtualbox.org/wiki/Downloads
+
+If you need more control over what program to install and such, you can use this. Note that you'll be installing a virtual Windows in your computer so make sure you have enough resources. And willing to spend time coz windows install takes time. Don't try this just before your deadline coz you need some windows only program.

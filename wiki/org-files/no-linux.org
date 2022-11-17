@@ -3,6 +3,10 @@
 #+OPTIONS: num:nil
 #+EXPORT_FILE_NAME: ../no-linux.html
 
+What to do if your professor doesn't support Linux. You need some apps that doesn't run on Linux.
+
+You can run windows temporarily to solve your problems even with your Linux Laptop in the following ways.
+
 * UC Resources
 ** Vmware horizon client
 Link: https://mydesk.uc.edu/
@@ -20,3 +24,7 @@ I haven't used the web version so can't tell you about that but the vmware-horiz
 Link: https://www.virtualbox.org/wiki/Downloads
 
 If you need more control over what program to install and such, you can use this. Note that you'll be installing a virtual Windows in your computer so make sure you have enough resources. And willing to spend time coz windows install takes time. Don't try this just before your deadline coz you need some windows only program.
+
+*** Tips
+- Give sufficient RAM for the virtual computer, but not too much as it'll freeze your computer.
+- Freeze the state instead of poweroff like in windows if you don't want updates. Imaging opening windows for just half an hour but waiting 1 hour for updates.

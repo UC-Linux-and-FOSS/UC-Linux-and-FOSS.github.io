@@ -6,18 +6,40 @@
 * Recently Added Pages
 - [[./no-linux.html][What to do if you can't use something in Linux]]
 * Pinned Pages
-
+- [[https://uc-linux-and-foss.github.io][UC/Linux Club Details]]
+  
 * Categorized Index
 
 ** Coping with no Linux Support
 - [[./no-linux.html][What to do if you can't use something in Linux]]
 
-** UC Related
+** TODO UC Related
+- UC Secure Connection Details
+** TODO Daily Life
 
-** Daily Life
+** TODO Student Life
 
-** Student Life
+** TODO Programming
 
-** Programming
+** TODO FOSS Alternatives
+The list will be constantly updating and we'll add pages with more details for starting with them as we can.
 
-** FOSS Alternatives
+*** Report Preparation
+- LaTeX
+- OpenOffice
+- poppler tools for pdf related commands
+*** Plotting/ Data Visualization
+- Python Matplotlib
+- R ggplot2
+- [[http://gnuplot.info/][gnuplot]]
+*** Raster/Vector Drawings
+- Krita
+- GIMP
+- [[https://inkscape.org/][Inkscape]]
+*** Audio Editing
+- [[https://www.audacityteam.org/][Audacity]]
+*** Video Editing
+- [[https://kdenlive.org/en/][Kdenlive]]
+
+* Contribution
+To add things to this list, please [[https://uc-linux-and-foss.github.io/][contact UC/Linux Club members]], join our discord and/or make the pull request directly to the [[https://github.com/UC-Linux-and-FOSS/UC-Linux-and-FOSS.github.io][github repository]] for this wiki.

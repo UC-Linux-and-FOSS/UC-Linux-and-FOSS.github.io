@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-01-16 Mon 12:21 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dealing with PDFs | UC Linux Wiki</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Dealing with PDFs | UC Linux Wiki</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org59357e7">Creating PDFs</a>
+<ul>
+<li><a href="#org3b8b4ca">LaTeX</a></li>
+<li><a href="#org7ac6002">Inkscape</a></li>
+<li><a href="#org0fd3891">Xournal++</a></li>
+</ul>
+</li>
+<li><a href="#orga43cba8">Conversion between raster Image and PDFs</a>
+<ul>
+<li><a href="#orgb812511">imagemagick</a></li>
+<li><a href="#org386b99b">tesseract</a></li>
+</ul>
+</li>
+<li><a href="#org96dd02c">Manipulating PDF pages</a>
+<ul>
+<li><a href="#org02fd400">poppler-utils</a></li>
+</ul>
+</li>
+<li><a href="#orge285462">Editing PDF Contents</a>
+<ul>
+<li><a href="#orgd29f1de">Inkscape</a></li>
+<li><a href="#orga4a8ee3">qpdf</a></li>
+</ul>
+</li>
+<li><a href="#org7e73adf">Filling PDFs</a>
+<ul>
+<li><a href="#org25c57e7">Xournal++</a></li>
+<li><a href="#org61ba484">LaTeX</a></li>
+</ul>
+</li>
+<li><a href="#org065e4ed">Viewing PDFs</a>
+<ul>
+<li><a href="#orgdb17946">qpdfview</a></li>
+<li><a href="#org5a0f90e">pdfpc</a></li>
+<li><a href="#org4e6cfed">Emacs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+PDF are the most widely used file formats in this era for most things digital that needs some formatting. And as a student you have to submit a lot of things in pdf, or get things in pdf.
+</p>
+
+<p>
+Here are details on few tools, and tips on making that easier. The first part talks about the things we can do with pdfs and a non exhaustive list of softwares that can do it, and then the second part describes individual software packages with their functions.
+</p>
+
+<div id="outline-container-org59357e7" class="outline-2">
+<h2 id="org59357e7">Creating PDFs</h2>
+<div class="outline-text-2" id="text-org59357e7">
+<p>
+Almost all the content manipulation/creation softwares has a export to pdf function nowadays so there is no limit to what could be put into this section. Let's just focus on few softwares that might be the top ones in the FOSS market.
+</p>
+</div>
+<div id="outline-container-org3b8b4ca" class="outline-3">
+<h3 id="org3b8b4ca"><a href="https://www.latex-project.org/">LaTeX</a></h3>
+<div class="outline-text-3" id="text-org3b8b4ca">
+<p>
+For creation of well formatted PDFs for thesis, homeworks, notes, reports, and such. Since LaTeX is a gient in itself, we'll soon develop a different page for it with more details on it.
+</p>
+
+<p>
+The package <a href="https://ctan.org/pkg/pdfoverlay">pdfoverlay</a> can put pdf pages in the background so you can add texts on it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7ac6002" class="outline-3">
+<h3 id="org7ac6002"><a href="https://inkscape.org/">Inkscape</a></h3>
+<div class="outline-text-3" id="text-org7ac6002">
+<p>
+For making any diagrams in the PDF format, this is the perfect tool. Making svgs, or pdfs with vector graphics means having high quality graphics in your documents. You can insert the svg or pdf into your LaTeX document with ease.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0fd3891" class="outline-3">
+<h3 id="org0fd3891"><a href="https://github.com/xournalpp/xournalpp">Xournal++</a></h3>
+<div class="outline-text-3" id="text-org0fd3891">
+<p>
+For making pdfs with handwritten notes. Xournal++ is a program that gives you pages to take notes, you can have handwritten notes, sketches and such without the complexity of graphics manipulator program like Inkscape. You can export the notes to PDF and include it into your homeworks or reports, or just have standalone PDF.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga43cba8" class="outline-2">
+<h2 id="orga43cba8">Conversion between raster Image and PDFs</h2>
+<div class="outline-text-2" id="text-orga43cba8">
+</div>
+<div id="outline-container-orgb812511" class="outline-3">
+<h3 id="orgb812511"><a href="https://imagemagick.org/">imagemagick</a></h3>
+<div class="outline-text-3" id="text-orgb812511">
+<p>
+If you just want to convert image into pdf, without actually making the contents like previous ones. You can use this. All you need is a single command <code>convert input.png output.pdf</code> and it'll do the conversion for you. It's useful when you need to submit pdfs and you have image. No need to insert the image into a word processor and export to pdf ever again.
+</p>
+
+<p>
+And it can also do the reverse, i.e. convert a pdf into image. Make sure to give a suitable dpi parameter, and you'll get a image for each page of the pdf. There is also <code>pdftoppm</code> command that does it (I think).
+</p>
+</div>
+</div>
+<div id="outline-container-org386b99b" class="outline-3">
+<h3 id="org386b99b"><a href="https://github.com/tesseract-ocr/tesseract">tesseract</a></h3>
+<div class="outline-text-3" id="text-org386b99b">
+<p>
+And if you want to convert image to searchable pdfs. Like with images of some text (book, or reports), then you can use tesseract. It can make searchable pdfs for you. I wish it could use pdf as input and give pdf output by processing the embedded images in the pdf, but it can only take image inputs.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org96dd02c" class="outline-2">
+<h2 id="org96dd02c">Manipulating PDF pages</h2>
+<div class="outline-text-2" id="text-org96dd02c">
+</div>
+<div id="outline-container-org02fd400" class="outline-3">
+<h3 id="org02fd400"><a href="https://en.wikipedia.org/wiki/Poppler_(software)#poppler-utils">poppler-utils</a></h3>
+<div class="outline-text-3" id="text-org02fd400">
+<p>
+It can merge pdfs with a simple commad <code>pdfunite</code>, get text from pdfs, get embedded images from pdf, and many more.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge285462" class="outline-2">
+<h2 id="orge285462">Editing PDF Contents</h2>
+<div class="outline-text-2" id="text-orge285462">
+<p>
+Even though PDFs are supposed to be the final stage before printing, meaning they are only supposed to be converted to image format, or formats for the printers to understand. We do have moments when we want to modify the contents.
+</p>
+
+<p>
+PDF is a binary file format, which means you cannot directly open it in a text editor and edit it (or can you?). But some softwares give you specific ways to edit it.
+</p>
+</div>
+
+<div id="outline-container-orgd29f1de" class="outline-3">
+<h3 id="orgd29f1de"><a href="https://inkscape.org/">Inkscape</a></h3>
+<div class="outline-text-3" id="text-orgd29f1de">
+<p>
+You can open pdf files in inkscape and it'll load it as vector graphics. You can make your edit and re export them. Or you can extract the vector graphics inside some pages and save it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga4a8ee3" class="outline-3">
+<h3 id="orga4a8ee3"><a href="https://qpdf.readthedocs.io/en/stable/index.html">qpdf</a></h3>
+<div class="outline-text-3" id="text-orga4a8ee3">
+<p>
+qpdf has <a href="https://qpdf.readthedocs.io/en/stable/qdf.html">qdf mode</a>, which is a completely valid pdf, that is made to be editable with a simple text editor as much as possible. And since it's a valid pdf, you can just edit it and open it with any pdf viewing software.
+</p>
+
+<p>
+You can edit the contents and move around pages, or remove/add them (to some extent) when your're dealing with qdf with just any editor you like. But be careful to not mess up the pdf structure.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7e73adf" class="outline-2">
+<h2 id="org7e73adf">Filling PDFs</h2>
+<div class="outline-text-2" id="text-org7e73adf">
+<p>
+This is a little different than simple editing in that the previous contents of the PDF will be same, and you'll just add overlays, it's nice for adding notes, or filling/signing forms.
+</p>
+</div>
+
+<div id="outline-container-org25c57e7" class="outline-3">
+<h3 id="org25c57e7"><a href="https://github.com/xournalpp/xournalpp">Xournal++</a></h3>
+<div class="outline-text-3" id="text-org25c57e7">
+<p>
+For making pdfs with handwritten notes. Xournal++ is a program that gives you pages to take notes, you can have handwritten notes, sketches and such without the complexity of graphics manipulator program like Inkscape. You can export the notes to PDF and include it into your homeworks or reports, or just have standalone PDF.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org61ba484" class="outline-3">
+<h3 id="org61ba484"><a href="https://www.latex-project.org/">LaTeX</a></h3>
+<div class="outline-text-3" id="text-org61ba484">
+<p>
+The package <a href="https://ctan.org/pkg/pdfoverlay">pdfoverlay</a> can put pdf pages in the background so you can add texts on it. This is useful when you want to use multiple inputs to fill multiple forms in a batch process. Or if you need to repeate it.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org065e4ed" class="outline-2">
+<h2 id="org065e4ed">Viewing PDFs</h2>
+<div class="outline-text-2" id="text-org065e4ed">
+<p>
+This seems straightforward, but there are ways to view pdfs (like presentation mode). There are a lot of FOSS programs for viewing pdfs, so I'm currently only listing the ones I use often.
+</p>
+</div>
+
+<div id="outline-container-orgdb17946" class="outline-3">
+<h3 id="orgdb17946"><a href="https://launchpad.net/qpdfview">qpdfview</a></h3>
+<div class="outline-text-3" id="text-orgdb17946">
+<p>
+simple and minimalistic pdf view.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a0f90e" class="outline-3">
+<h3 id="org5a0f90e"><a href="https://pdfpc.github.io/">pdfpc</a></h3>
+<div class="outline-text-3" id="text-org5a0f90e">
+<p>
+This is an excellent program to present slides from pdf. It is most useful for slides made with LaTeX beamer, as it has support for multi monitor setup, frame animations, gifs, videos, timer, pointer, sketch, and many more features you might need while presenting.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4e6cfed" class="outline-3">
+<h3 id="org4e6cfed"><a href="https://www.gnu.org/software/emacs/">Emacs</a></h3>
+<div class="outline-text-3" id="text-org4e6cfed">
+<p>
+Emacs can view pdfs with extentions. Not only that, it can have extensions to make notes related to the pdf file, with postitioning saved. It can make/browse table of contents. It can use synctex to locate the source position from pdf generated with LaTeX. It can probably do a lot more as users of emacs are familiar with it.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2023-01-16 Mon 12:21</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

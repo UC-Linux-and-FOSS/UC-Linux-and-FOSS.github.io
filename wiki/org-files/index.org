@@ -4,6 +4,7 @@
 #+EXPORT_FILE_NAME: ../index.html
 
 * Recently Added Pages
+- [[./dealing-with-pdfs.html][Dealing with PDFs]]
 - [[./no-linux.html][What to do if you can't use something in Linux]]
 * Pinned Pages
 - [[https://uc-linux-and-foss.github.io][UC/Linux Club Details]]
@@ -15,8 +16,8 @@
 
 ** TODO UC Related
 - UC Secure Connection Details
-** TODO Daily Life
-
+** Daily Life
+- [[./dealing-with-pdfs.html][Dealing with PDFs]]
 ** TODO Student Life
 
 ** TODO Programming

@@ -1,0 +1,73 @@
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+#+TITLE: Beauty of Bash | UC Linux Wiki
+#+OPTIONS: num:nil
+#+EXPORT_FILE_NAME: ../beauty-of-bash.html
+
+* Introduction to BASH
+[[https://www.wikiwand.com/en/articles/Bash_(Unix_shell)][Bash]] is a shell program that is used by most linux distros. You can also use it in Windows, and Mac also has support for bash.
+
+Bash allows you to do things from the terminal, simple or complex. Although most of what bash can do is provide a syntax and methods for programs to execute themselves. And as you install and use more program, you can do more things.
+
+Bash has some built in commands, and then the remaining things are programs you install or comes with your operating system.
+
+* Bash Syntax
+
+The syntax of any bash command is ~command-name [args]~, where the arguments are optional. Arguments are separated by space, if you have space in your arguments (like some filenames, strings), you can quote them using ="= and ='=. There are differences between those two types of quote that will be discussed later.
+
+To understand what shell command does you can use this website: [[https://explainshell.com/][https://explainshell.com/]]
+
+Some example bash commands:
+| Command          | Description                                 |
+|------------------+---------------------------------------------|
+| ~cd path/to/dir~ | Change Working directory to ~path/to/file/~ |
+| ~ls~             | List files/directories in current path      |
+
+More complicated syntax include things like =|=, =&=, =`=, etc which allow multiple programs to work together with each other.
+
+For example,
+- =command-a | command-b= sends the output of =command-a= as input of =command-b=, if both programs use standard input/output as input/output.
+- =command-a &=, runs the =command-a= in the background, so you can continue to use the terminal for other things.
+- =`= quoted strings are nested commands that will run and their output will be replaced in the string.
+
+* Using Bash arguments in your programming languages
+** Bash script
+Bash arguments are accessible as =$1=, =$2=, etc from inside a bash scripts.
+
+For example, a bash script =greet.sh=
+#+begin_src bash
+name="$1"
+age="$2"
+
+printf "Hi %s, you are %d years old" $name $age
+#+end_src
+
+Can be run with two arguments in the terminal, name and age.
+
+e.g. =bash greet.sh Joe 21= => =Hi Joe, you are 21 years old=
+
+** Python Script
+Python provides the =sys.argv= values.
+
+
+For example, a python script =greet.py=
+#+begin_src python
+import sys
+
+name=sys.argv[1]
+age=sys.argv[2]
+
+print(f"Hi {name}, you are {age} years old")
+#+end_src
+
+Can be run with two arguments in the terminal, name and age.
+
+e.g. =python greet.py Joe 21= => =Hi Joe, you are 21 years old=
+
+** C
+C has =argc=, =argv= as arguments to the =main= function, which are count of number of arguments and the pointer to them.
+
+** Rust
+Rust lets you access commandline arguments with =std::env::args()=
+
+* More Information
+For more details join our meeting on Beauty of bash.

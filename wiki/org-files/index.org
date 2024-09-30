@@ -4,6 +4,7 @@
 #+EXPORT_FILE_NAME: ../index.html
 
 * Recently Added Pages
+- [[./beauty-of-bash.html][Beauty of Bash]]
 - [[./dealing-with-pdfs.html][Dealing with PDFs]]
 - [[./no-linux.html][What to do if you can't use something in Linux]]
 * Pinned Pages

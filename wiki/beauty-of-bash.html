@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-09-30 Mon 18:05 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Beauty of Bash | UC Linux Wiki</title>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Beauty of Bash | UC Linux Wiki</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org7266e3c">Introduction to BASH</a></li>
+<li><a href="#org118daa7">Bash Syntax</a></li>
+<li><a href="#orgbffcee9">Using Bash arguments in your programming languages</a>
+<ul>
+<li><a href="#orgf090dc7">Bash script</a></li>
+<li><a href="#orgd826c8e">Python Script</a></li>
+<li><a href="#org622346c">C</a></li>
+<li><a href="#org77ec0ff">Rust</a></li>
+</ul>
+</li>
+<li><a href="#orge6551f9">More Information</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7266e3c" class="outline-2">
+<h2 id="org7266e3c">Introduction to BASH</h2>
+<div class="outline-text-2" id="text-org7266e3c">
+<p>
+<a href="https://www.wikiwand.com/en/articles/Bash_(Unix_shell)">Bash</a> is a shell program that is used by most linux distros. You can also use it in Windows, and Mac also has support for bash.
+</p>
+
+<p>
+Bash allows you to do things from the terminal, simple or complex. Although most of what bash can do is provide a syntax and methods for programs to execute themselves. And as you install and use more program, you can do more things.
+</p>
+
+<p>
+Bash has some built in commands, and then the remaining things are programs you install or comes with your operating system.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org118daa7" class="outline-2">
+<h2 id="org118daa7">Bash Syntax</h2>
+<div class="outline-text-2" id="text-org118daa7">
+<p>
+The syntax of any bash command is <code>command-name [args]</code>, where the arguments are optional. Arguments are separated by space, if you have space in your arguments (like some filenames, strings), you can quote them using <code>"</code> and <code>'</code>. There are differences between those two types of quote that will be discussed later.
+</p>
+
+<p>
+To understand what shell command does you can use this website: <a href="https://explainshell.com/">https://explainshell.com/</a>
+</p>
+
+<p>
+Some example bash commands:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>cd path/to/dir</code></td>
+<td class="org-left">Change Working directory to <code>path/to/file/</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ls</code></td>
+<td class="org-left">List files/directories in current path</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+More complicated syntax include things like <code>|</code>, <code>&amp;</code>, <code>`</code>, etc which allow multiple programs to work together with each other.
+</p>
+
+<p>
+For example,
+</p>
+<ul class="org-ul">
+<li><code>command-a | command-b</code> sends the output of <code>command-a</code> as input of <code>command-b</code>, if both programs use standard input/output as input/output.</li>
+<li><code>command-a &amp;</code>, runs the <code>command-a</code> in the background, so you can continue to use the terminal for other things.</li>
+<li><code>`</code> quoted strings are nested commands that will run and their output will be replaced in the string.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbffcee9" class="outline-2">
+<h2 id="orgbffcee9">Using Bash arguments in your programming languages</h2>
+<div class="outline-text-2" id="text-orgbffcee9">
+</div>
+<div id="outline-container-orgf090dc7" class="outline-3">
+<h3 id="orgf090dc7">Bash script</h3>
+<div class="outline-text-3" id="text-orgf090dc7">
+<p>
+Bash arguments are accessible as <code>$1</code>, <code>$2</code>, etc from inside a bash scripts.
+</p>
+
+<p>
+For example, a bash script <code>greet.sh</code>
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #cae682;">name</span>=<span style="color: #95e454;">"$1"</span>
+<span style="color: #cae682;">age</span>=<span style="color: #95e454;">"$2"</span>
+
+<span style="color: #e5786d;">printf</span> <span style="color: #95e454;">"Hi %s, you are %d years old"</span> $<span style="color: #cae682;">name</span> $<span style="color: #cae682;">age</span>
+</pre>
+</div>
+
+<p>
+Can be run with two arguments in the terminal, name and age.
+</p>
+
+<p>
+e.g. <code>bash greet.sh Joe 21</code> <code>&gt; =Hi Joe, you are 21 years old</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd826c8e" class="outline-3">
+<h3 id="orgd826c8e">Python Script</h3>
+<div class="outline-text-3" id="text-orgd826c8e">
+<p>
+Python provides the <code>sys.argv</code> values.
+</p>
+
+
+<p>
+For example, a python script <code>greet.py</code>
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #8ac6f2; font-weight: bold;">import</span> sys
+
+<span style="color: #cae682;">name</span>=sys.argv[1]
+<span style="color: #cae682;">age</span>=sys.argv[2]
+
+<span style="color: #e5786d;">print</span>(f<span style="color: #95e454;">"Hi </span>{name}<span style="color: #95e454;">, you are </span>{age}<span style="color: #95e454;"> years old"</span>)
+</pre>
+</div>
+
+<p>
+Can be run with two arguments in the terminal, name and age.
+</p>
+
+<p>
+e.g. <code>python greet.py Joe 21</code> <code>&gt; =Hi Joe, you are 21 years old</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org622346c" class="outline-3">
+<h3 id="org622346c">C</h3>
+<div class="outline-text-3" id="text-org622346c">
+<p>
+C has <code>argc</code>, <code>argv</code> as arguments to the <code>main</code> function, which are count of number of arguments and the pointer to them.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org77ec0ff" class="outline-3">
+<h3 id="org77ec0ff">Rust</h3>
+<div class="outline-text-3" id="text-org77ec0ff">
+<p>
+Rust lets you access commandline arguments with <code>std::env::args()</code>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge6551f9" class="outline-2">
+<h2 id="orge6551f9">More Information</h2>
+<div class="outline-text-2" id="text-orge6551f9">
+<p>
+For more details join our meeting on Beauty of bash.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-09-30 Mon 18:05</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
